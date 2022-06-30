@@ -1,9 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Code Like a Pro</string>
-    <string name="nmedia">NMedia!</string>
     <string name="post_avatars">Неотология. Университет интернет - профессий.</string>
     <string name="icon_data">26 июня 2022 года</string>
     <string name="menu">menu</string>
     <string name="text">Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам от новичков до уверенных профессионалов.</string>
-    <string name="text_link"><![CDATA[Но самое важное остается с нами: мыверим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен ->  http:/netolo.gy/fyb]]></string>
 </resources>
