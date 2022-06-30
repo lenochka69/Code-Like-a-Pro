@@ -52,89 +52,44 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/icon_data" />
 
+
     <TextView
         android:id="@+id/text_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/text_link"
+        android:layout_marginTop="12dp"
+        android:text="@string/link"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_ıcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="baseline_more,icon_data,icon_netology"
+         />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="repost,watch,like,visibility,shortcut,favorite"
+        />
 
 
     <ImageView
         android:id="@+id/favorite"
         android:layout_width="30dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/favorite"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/like"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/shortcut"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/shortcut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/repost"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/like" />
-
-    <ImageView
-        android:id="@+id/visibility"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/visibility"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/watch"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/repost" />
-
-    <TextView
-        android:id="@+id/like"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="100"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/shortcut"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/favorite" />
-
-    <TextView
-        android:id="@+id/repost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="50"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/visibility"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortcut" />
-
-    <TextView
-        android:id="@+id/watch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="1,5K"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/visibility" />
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="273dp"
+        app:layout_constraintTop_toBottomOf="@id/text_link"/>
 
     <ImageView
         android:id="@+id/baseline_more"
@@ -142,25 +97,63 @@
         android:layout_height="50dp"
         android:src="@drawable/ic_baseline_more_vert_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_link"
         app:layout_constraintTop_toTopOf="@id/icon_netology" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="baseline_more,icon_netology,icon_data"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="715dp" />
+    <ImageView
+        android:id="@+id/visibility"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/visibility"
+        app:layout_constraintEnd_toStartOf="@+id/watch"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/repost"
+        app:layout_constraintTop_toBottomOf="@id/text_link" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier11"
+    <ImageView
+        android:id="@+id/shortcut"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/shortcut"
+        app:layout_constraintEnd_toStartOf="@+id/repost"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/like"
+        tools:layout_editor_absoluteY="270dp"
+        app:layout_constraintTop_toBottomOf="@id/text_link"/>
+
+    <TextView
+        android:id="@+id/like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        app:constraint_referenced_ids="repost,watch,like,visibility,shortcut,favorite"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="715dp" />
+        android:layout_marginTop="20dp"
+        android:text="100"
+        app:layout_constraintEnd_toStartOf="@+id/shortcut"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/favorite"
+        app:layout_constraintTop_toBottomOf="@id/text_link" />
+
+    <TextView
+        android:id="@+id/repost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:text="50"
+        app:layout_constraintEnd_toStartOf="@+id/visibility"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcut"
+        app:layout_constraintTop_toBottomOf="@id/text_link" />
+
+    <TextView
+        android:id="@+id/watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="1,5K"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/visibility"
+        app:layout_constraintTop_toBottomOf="@id/text_link" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
