@@ -308,7 +308,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../icons/material/materialicons/visibility/baseline_visibility_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../icons/material/materialicons/share/baseline_share_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -318,7 +318,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="visibility" />
+                            <entry key="color" value="d734c7" />
+                            <entry key="outputName" value="ic_baseline_share" />
                             <entry key="sourceFile" value="C:\Users\Public\CodeLikeaPro" />
                           </map>
                         </option>
