@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val textView = findViewById<TextView>(R.id.myTextView)
+
         val viewModel by viewModels<PostViewModel>()
         viewModel.data.observe(this) { post ->
             with(binding) {
@@ -42,18 +44,16 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        val textView = findViewById<TextView>(R.id.myTextView)
+
         if (savedInstanceState != null)
             textView.text = savedInstanceState.getString(KEY)
+
         binding.favorite?.setOnClickListener {
             viewModel.like()
             Toast.makeText(this, "И тебе Like", Toast.LENGTH_SHORT).show();
             textView.text="GOGOGO"
 
         }
-
-
-
         binding.share?.setOnClickListener {
             viewModel.repost()
         }
