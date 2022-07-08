@@ -2,10 +2,12 @@ package com.example.codelikeapro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Contacts.SettingsColumns.KEY
 
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 
 import com.example.codelikeapro.databinding.ActivityMainBinding
@@ -40,16 +42,25 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        val textView = findViewById<TextView>(R.id.myTextView)
+        if (savedInstanceState != null)
+            textView.text = savedInstanceState.getString(KEY)
         binding.favorite?.setOnClickListener {
             viewModel.like()
+            Toast.makeText(this, "И тебе Like", Toast.LENGTH_SHORT).show();
+            textView.text="GOGOGO"
+
         }
+
+
 
         binding.share?.setOnClickListener {
             viewModel.repost()
-
         }
+
         Log.d(MY_FILTER_TAG, "onCreate()")
 
     }
+
 }
 
