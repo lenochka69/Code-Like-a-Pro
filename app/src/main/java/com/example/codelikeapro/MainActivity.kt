@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 
 import com.example.codelikeapro.databinding.ActivityMainBinding
+import com.example.codelikeapro.databinding.CardPostBinding
 
 
 private const val TAG = "MainActivity"
@@ -22,45 +23,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val viewModel: PostViewModel by viewModels()
+        val adapter = PostsAdapter(
+            onLikeListener = { viewModel.likeById(it.id) },
+            onShareListener = { viewModel.repostById(it.id) }
+        )
+        binding.list.adapter = adapter
 
-        val textView = findViewById<TextView>(R.id.myTextView)
-
-        val viewModel by viewModels<PostViewModel>()
-        viewModel.data.observe(this) { post ->
-            with(binding) {
-                author.text = post.author
-                published.text = post.published
-                content.text = post.content
-                textLink.text = post.link
-
-                val likeImage = if (post.likeByMe) {
-                    R.drawable.ic_favorite_24
-                } else {
-                    R.drawable.favorite
-                }
-                favorite?.setImageResource(likeImage)
-                like?.text = Utils.numToPostfix(post.likes)
-                repost?.text = Utils.numToPostfix(post.reposted)
-            }
-
+        viewModel.data.observe(this) { posts ->
+            adapter.submitList(posts)
         }
-
-        if (savedInstanceState != null)
-            textView.text = savedInstanceState.getString(KEY)
-
-        binding.favorite?.setOnClickListener {
-            viewModel.like()
-            Toast.makeText(this, "И тебе Like", Toast.LENGTH_SHORT).show();
-            textView.text="GOGOGO"
-
-        }
-        binding.share?.setOnClickListener {
-            viewModel.repost()
-        }
-
         Log.d(MY_FILTER_TAG, "onCreate()")
-
     }
-
 }
+
+
 

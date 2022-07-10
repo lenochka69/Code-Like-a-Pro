@@ -8,38 +8,46 @@ import kotlin.math.pow
 
 
 class PostRepositoryImpl: PostRepository {
-    var post = Post (
+    var posts = listOf (
+        Post (
         author = "Неотология. Университет интернет - профессий.",
         published = "26 июня 2022 года",
         content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам от новичков до уверенных профессионалов.",
         link = "Но самое важное остается с нами: мыверим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен ->  http:/netolo.gy/fyb",
-        id = 0,
+        id = 1,
         likeByMe = false,
         likes = 9999,
-        repost = false
-            )
-    private val data = MutableLiveData(post)
 
+            reposted = 900
+            ),
+        Post (
+            author = "Неотология. Университет интернет - профессий.",
+            published = "26 июня 2022 года",
+            content = "Привет, это новая Нетология!",
+            link = "Наша миссия - помочь встать на путь роста и начать цепочку перемен ->  http:/netolo.gy/fyb",
+            id = 2,
+            likeByMe = false,
+            likes = 9999,
 
-    override fun get(): LiveData<Post> = data
+            reposted = 900
+        ),
+    )
+    private val data = MutableLiveData(posts)
+    override fun getAll(): LiveData <List<Post>> = data
 
-    override fun like() {
-        post = post.copy(
-            likeByMe = !post.likeByMe,
-            likes = if (post.likeByMe) post.likes -1 else post.likes +1
+    override fun likeById(id: Long) {
+        posts = posts.map { if (it.id!=id) it else it.copy(likeByMe =  !it.likeByMe,
+            likes = if (!it.likeByMe) it.likes + 1 else it.likes - 1)
+        }
 
-            )
-        data.value = post
+        data.value = posts
     }
 
-    override fun repost() {
-
-        post = post.copy(
-            repost = !post.repost,
-            reposted = if (post.repost) post.reposted +1 else post.reposted +1
-        )
-
-        data.value = post
+    override fun repostById(id: Long) {
+        posts = posts.map { if (it.id!=id) it else it.copy(
+        reposted =  it.reposted +1 )
+        }
+        data.value = posts
     }
 
 }
