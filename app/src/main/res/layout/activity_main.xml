@@ -6,13 +6,117 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".MainActivity">
+
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="715dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/card_post" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="content,save" />
+
+
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:hint="@string/text_link"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/material_emphasis_medium"/>
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="description_save"
+        android:padding="@dimen/material_emphasis_medium"
+        android:src="@drawable/ic_baseline_save_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/edit_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/material_emphasis_high_type"
+        android:orientation="horizontal"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="edit_message, cancel" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/card_post"
-        tools:itemCount="5"
-        />
+        android:visibility="visible"
+        app:constraint_referenced_ids="edit_message, bottom_line_edit,content_check,cancel"
+        app:layout_constraintBottom_toTopOf="@id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_barrier" />
+
+
+
+    <TextView
+        android:id="@+id/edit_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/material_emphasis_medium"
+        android:paddingTop="@dimen/material_emphasis_medium"
+        android:text="@string/edit_message"
+        android:textColor="@color/hot_pink"
+        app:layout_constraintBottom_toTopOf="@id/content_check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="description_cancel"
+        android:padding="@dimen/material_emphasis_medium"
+        android:src="@drawable/ic_baseline_cancel_24"
+        app:layout_constraintBottom_toTopOf="@id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <TextView
+        android:id="@+id/content_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingStart="@dimen/material_emphasis_medium"
+        android:paddingBottom="@dimen/material_emphasis_medium"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_line_edit"
+        app:layout_constraintEnd_toStartOf="@+id/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_message"
+        tools:text="message"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/bottom_line_edit"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/plum"
+        android:contentDescription="@string/description_bottom_line_edit"
+        app:layout_constraintBottom_toTopOf="@id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </FrameLayout>

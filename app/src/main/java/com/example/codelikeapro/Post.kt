@@ -7,9 +7,8 @@ data class Post (
   val link: String,
   val id: Long,
   val likeByMe: Boolean = false,
-
   val likes: Int = 990,
-  val reposted: Int = 990
-
-  )
+  val reposted: Int = 990,
+  val ownedByMe:Boolean = false
+)
 
