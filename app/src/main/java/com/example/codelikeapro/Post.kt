@@ -9,6 +9,8 @@ data class Post (
   val likeByMe: Boolean = false,
   val likes: Int = 990,
   val reposted: Int = 990,
-  val ownedByMe:Boolean = false
+  val ownedByMe:Boolean = false,
+  val video: String? = null,
+
 )
 

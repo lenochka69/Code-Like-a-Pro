@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Code Like a Pro</string>
-    <string name="nmedia" translatable="false">НМедиа!</string>
+    <string name="description_post_author_avatar" translatable="false" />
+    <string name="description_more_vert" translatable="false" />
+    <string name="description_like" translatable="false" />
+    <string name="description_liked" translatable="false" />
+    <string name="description_post_like" translatable="false" />
+    <string name="description_share" translatable="false" />
+    <string name="description_view" translatable="false" />
+    <string name="description_save" translatable="false" />
+    <string name="description_edit" translatable="false" />
+    <string name="description_cancel" translatable="false" />
+    <string name="description_bottom_line_edit" translatable="false" />
+    <string name="description_add_post" translatable="false" />
+    <string name="description_save_post" translatable="false" />
+    <string name="description_play" translatable="false" />
+    <string name="description_background_video" translatable="false" />
+    <string name="post_menu_remove" translatable="false">Remove</string>
+    <string name="post_input_text_hint" translatable="false">Edit Post text</string>
+    <string name="empty_post_error" translatable="false">Post is blank</string>
+    <string name="post_menu_edit" translatable="false">Edit</string>
+    <string name="edit_message">Edit Message</string>
+    <string name="empty_content_error" translatable="false">Content is empty</string>
+    <string name="text">Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам от новичков до уверенных профессионалов.</string>
     <string name="post_avatars">Неотология. Университет интернет - профессий.</string>
     <string name="icon_data">26 июня 2022 года</string>
     <string name="menu">menu</string>
-    <string name="text">Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам от новичков до уверенных профессионалов.</string>
-    <string name="text_link">"Но самое важное остается с нами: мыверим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен "</string>
-    <string name="link"><![CDATA[Но самое важное остается с нами: мыверим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен ->  http:/netolo.gy/fyb]]></string>
-    <string name="edit_message">edit_message</string>
-    <string name="description_bottom_line_edit">description_bottom_line_edit</string>
 </resources>

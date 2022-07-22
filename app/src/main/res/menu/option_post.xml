@@ -4,7 +4,8 @@
     <item
         android:id="@+id/remove"
         android:title="Remove"
-        android:icon="@drawable/ic_baseline_more_vert_24"/>
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        />
     <item
         android:id="@+id/edit"
         android:title="Edit"

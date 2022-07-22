@@ -15,27 +15,22 @@ class PostViewHolder (
             author.text = post.author
             published.text = post.published
             content.text = post.content
-            textLink.text = post.link
             like.text = Utils.numToPostfix(post.likes)
-            repost.text = Utils.numToPostfix(post.reposted)
+            share.text = Utils.numToPostfix(post.reposted)
+            like.isChecked = post.likeByMe
 
-            favorite.setImageResource(
-                if (post.likeByMe) {
-                    R.drawable.ic_favorite_24
-                } else {
-                    R.drawable.favorite
-                }
-            )
-
-            favorite.setOnClickListener {
-                listener.onLike(post)
-
-            }
-            share.setOnClickListener {
-                listener.onShare(post)
+            if (post.video == null) {
+                binding.playVideoGroup.visibility = View.GONE
+            } else {
+                binding.playVideoGroup.visibility = View.VISIBLE
             }
 
-            more.setOnClickListener {
+            like.setOnClickListener { listener.onLike(post) }
+            share.setOnClickListener { listener.onShare(post) }
+            play.setOnClickListener { listener.onVideo(post) }
+            backgroundVideo.setOnClickListener { listener.onVideo(post) }
+
+            menu.setOnClickListener {
                 PopupMenu(it.context, it).apply {
                     inflate(R.menu.option_post)
 

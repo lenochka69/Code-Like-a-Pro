@@ -10,7 +10,10 @@ val emptyPost = Post(
     0L,
     false,
     0,
-    0
+    0,
+false,
+""
+
 )
 
 class PostViewModel : ViewModel () {
