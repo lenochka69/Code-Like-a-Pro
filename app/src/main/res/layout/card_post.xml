@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding= "@dimen/common_spacing_medium">
+    android:padding= "@dimen/common_spacing_medium"
+    tools:context=".MainActivity">
 
 
     <TextView
@@ -50,7 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:checkable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -130,7 +130,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing_medium"
         android:layout_marginTop="@dimen/common_spacing_medium"
-        android:checkable="true"
         android:contentDescription="@string/description_share"
         app:layout_constraintStart_toEndOf="@+id/like"
         app:layout_constraintTop_toTopOf="@+id/downer_menu_barrier"
@@ -143,7 +142,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing_medium"
-        android:checkable="false"
         android:contentDescription="@string/description_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/downer_menu_barrier"
