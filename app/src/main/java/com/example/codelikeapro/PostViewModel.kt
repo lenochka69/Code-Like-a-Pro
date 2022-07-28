@@ -6,13 +6,13 @@ val emptyPost = Post(
     "",
     "",
     "",
-    "",
-    0L,
+    0,
     false,
     0,
     0,
-false,
-""
+    0,
+null,
+
 
 )
 

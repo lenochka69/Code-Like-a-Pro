@@ -1,23 +1,20 @@
 package com.example.codelikeapro
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.codelikeapro.databinding.ActivityMainBinding
-import com.example.codelikeapro.databinding.NewPostBinding
+import com.example.codelikeapro.databinding.ActivityNewPostBinding
 
-class NewPostAcivity : AppCompatActivity() {
+class NewPostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    val binding = NewPostBinding.inflate(layoutInflater)
+    val binding = ActivityNewPostBinding.inflate(layoutInflater)
     setContentView(binding.root)
-    binding.content.requestFocus()
 
 
-        val contents = intent.getStringExtra(Intent.EXTRA_TEXT)
-
-    binding.content.setText(contents)
 
     binding.save.setOnClickListener {
         if (binding.content.text.isNullOrBlank()) {
@@ -27,6 +24,7 @@ class NewPostAcivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
             setResult(RESULT_CANCELED)
+
         } else {
             val result = Intent().putExtra(Intent.EXTRA_TEXT, binding.content.text.toString())
             setResult(RESULT_OK, result)

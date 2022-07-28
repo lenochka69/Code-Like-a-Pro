@@ -2,10 +2,11 @@ package com.example.codelikeapro
 
 import android.view.View
 import android.widget.PopupMenu
+import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codelikeapro.databinding.CardPostBinding
 
-class PostViewHolder (
+class PostViewHolder(
     private val binding: CardPostBinding,
     private val listener: OnInteractionListeren
 

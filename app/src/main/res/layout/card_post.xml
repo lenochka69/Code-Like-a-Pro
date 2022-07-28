@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toStartOf="@id/menu"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toTopOf="@+id/avatar"
-        tools:text="nmedia" />
+        tools:text="@sample/posts.json/data/author" />
 
     <TextView
         android:id="@+id/published"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toStartOf="@+id/menu"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@id/author"
-        tools:text="@string/icon_data" />
+        tools:text="@sample/posts.json/data/published" />
 
     <ImageView
         android:id="@+id/avatar"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/upper_menu_barrier"
-        tools:text="@string/text" />
+        tools:text="@sample/posts.json/data/content" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/play_video_group"
@@ -121,7 +121,7 @@
         android:checkable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/downer_menu_barrier"
-        tools:text="999" />
+        tools:text="@sample/posts.json/data/likes" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/share"
@@ -133,7 +133,7 @@
         android:contentDescription="@string/description_share"
         app:layout_constraintStart_toEndOf="@+id/like"
         app:layout_constraintTop_toTopOf="@+id/downer_menu_barrier"
-        tools:text="990"
+        tools:text="@sample/posts.json/data/reposted"
          />
 
     <com.google.android.material.button.MaterialButton
@@ -145,7 +145,7 @@
         android:contentDescription="@string/description_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/downer_menu_barrier"
-        tools:text="999"
+        tools:text="@sample/posts.json/data/view"
         />
 
 

@@ -27,4 +27,5 @@
     <string name="post_avatars">Неотология. Университет интернет - профессий.</string>
     <string name="icon_data">26 июня 2022 года</string>
     <string name="menu">menu</string>
+    <string name="post_input_hint">post_input</string>
 </resources>

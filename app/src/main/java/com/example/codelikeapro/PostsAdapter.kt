@@ -1,12 +1,9 @@
 package com.example.codelikeapro
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
 import com.example.codelikeapro.databinding.CardPostBinding
-import java.util.*
 
 
 class PostAdapter(
