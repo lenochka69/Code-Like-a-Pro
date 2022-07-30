@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding= "@dimen/common_spacing_medium"
-    tools:context=".MainActivity">
+    android:id="@+id/post_layout">
 
 
     <TextView
@@ -134,7 +134,7 @@
         app:layout_constraintStart_toEndOf="@+id/like"
         app:layout_constraintTop_toTopOf="@+id/downer_menu_barrier"
         tools:text="@sample/posts.json/data/reposted"
-         />
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/view"

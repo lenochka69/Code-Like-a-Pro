@@ -1,8 +1,12 @@
-package com.example.codelikeapro
+package com.example.codelikeapro.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
+import com.example.codelikeapro.OnInteractionListeren
+import com.example.codelikeapro.Post
+import com.example.codelikeapro.PostDiffCallback
+import com.example.codelikeapro.PostViewHolder
 import com.example.codelikeapro.databinding.CardPostBinding
 
 
@@ -22,4 +26,4 @@ class PostAdapter(
         val post = getItem(position)
         holder.bind(post)
     }
-            }
+}

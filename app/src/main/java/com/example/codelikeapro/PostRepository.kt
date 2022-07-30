@@ -1,6 +1,7 @@
 package com.example.codelikeapro
 
 import androidx.lifecycle.LiveData
+import com.example.codelikeapro.Post
 
 interface PostRepository {
     fun getAll (): LiveData <List<Post>>

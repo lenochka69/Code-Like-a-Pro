@@ -1,16 +1,15 @@
 package com.example.codelikeapro
 
+
 import android.view.View
 import android.widget.PopupMenu
-import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codelikeapro.databinding.CardPostBinding
 
 class PostViewHolder(
     private val binding: CardPostBinding,
     private val listener: OnInteractionListeren
-
-        ): RecyclerView.ViewHolder (binding.root) {
+    ): RecyclerView.ViewHolder (binding.root) {
     fun bind(post: Post) {
         binding.apply {
             author.text = post.author
@@ -43,14 +42,14 @@ class PostViewHolder(
                             }
                             R.id.edit -> {
                                 listener.onEdit(post)
-                                true
+                                 true
                             }
 
-                            else -> false
+                            else ->  false
                         }
                     }
                 }.show()
             }
         }
     }
-        }
+}

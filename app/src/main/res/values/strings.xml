@@ -30,5 +30,6 @@
     <string name="menu">menu</string>
     <string name="post_input_hint">post_input</string>
     <string name="create_new_post">create</string>
+    <string name="chooser_share_post">chooser_share_post</string>
 
 </resources>

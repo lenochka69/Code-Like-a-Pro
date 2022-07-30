@@ -1,7 +1,9 @@
 package com.example.codelikeapro
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+
 val emptyPost = Post(
     "",
     "",
@@ -11,19 +13,22 @@ val emptyPost = Post(
     0,
     0,
     0,
-null,
+    null,
 
 
-)
+    )
 
-class PostViewModel : ViewModel () {
-    private val repository: PostRepository = PostRepositoryImpl()
+class PostViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val repository: PostRepository = PostRepositoryImpl(application)
+
     val data = repository.getAll()
+    val edited = MutableLiveData(emptyPost)
+
     fun likeById(id: Long) = repository.likeById(id)
     fun shareById(id: Long) = repository.repostById(id)
     fun removeById(id: Long) = repository.removeById(id)
 
-    val edited = MutableLiveData(emptyPost)
     fun save() {
         edited.value?.let {
             repository.save(it)
@@ -35,7 +40,7 @@ class PostViewModel : ViewModel () {
         edited.value = post
     }
 
-    fun changeContent(content: String) {
+    fun editContent(content: String) {
         edited.value?.let {
             val trimmed = content.trim()
             if (trimmed == it.content) {

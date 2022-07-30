@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/drawable/favorite.xml" value="0.1046875" />
+        <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/layout/activity_edit_post.xml" value="0.18" />
         <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/layout/card_post.xml" value="0.22" />
+        <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/layout/activity_new_post.xml" value="0.1" />
+        <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/layout/card_post.xml" value="0.18" />
         <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/layout/edit_post.xml" value="0.1" />
         <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/layout/new_post.xml" value="0.1" />
         <entry key="..\:/Users/Public/CodeLikeaPro/app/src/main/res/menu/menu.xml" value="0.1" />

@@ -308,7 +308,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../icons/material/materialicons/play_circle/baseline_play_circle_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../icons/material/materialicons/save/baseline_save_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -319,7 +319,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="d734c7" />
-                            <entry key="outputName" value="ic_baseline_play_circle_24" />
+                            <entry key="outputName" value="ic_baseline_save_24" />
                             <entry key="sourceFile" value="C:\Users\Public\CodeLikeaPro" />
                           </map>
                         </option>
